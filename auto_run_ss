@@ -1,0 +1,17 @@
+#! /bin/bash
+
+process_to_kill=`ps -ef | grep -E 'ss-server|server_linux_amd64' | grep -v 'grep' | awk '{print $2}'`
+
+echo 'Process To Kill :' $process_to_kill
+
+kcptun="2"
+
+kill -9 $process_to_kill
+
+ss-server  &
+
+if [ $1 == $kcptun ]
+    then
+    	server_linux_amd64 -c /etc/kcptun/config.json &
+    fi
+

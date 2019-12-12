@@ -1,0 +1,12 @@
+{
+  "listen": ":31520",
+  "target": "127.0.0.1:31521",
+  "sockbuf": 16777217,
+  "mode": "fast3",
+  "conn": 2,
+  "mtu": 1500,
+  "sndwnd": 2048,
+  "rcvwnd": 512,
+  "quiet": true
+}
+
